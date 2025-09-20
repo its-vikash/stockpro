@@ -133,3 +133,7 @@ body {
     @apply absolute left-0 top-[3px] h-6 w-1.5 rounded-lg;
     background: var(--primary);
 }
+
+a#tv-attr-logo {
+  display: none !important;
+}

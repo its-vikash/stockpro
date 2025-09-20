@@ -41,6 +41,7 @@ export default function Login(){
       localStorage.removeItem('rememberedPassword');
     }
     localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('userName', formData.email.split('@')[0]); // Store username from email
     navigate('/derivatives');
   };
 

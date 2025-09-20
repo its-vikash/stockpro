@@ -28,6 +28,7 @@ export default function Register(){
       return;
     }
     localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('userName', formData.name); // Store user's name
     navigate('/derivatives');
   };
 
