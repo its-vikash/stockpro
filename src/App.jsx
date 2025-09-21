@@ -23,11 +23,14 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/derivatives" element={
-              <AuthGuard>
-                <Derivatives />
-              </AuthGuard>
-            } />
+            <Route
+              path="/derivatives"
+              element={
+                <AuthGuard>
+                  <Derivatives />
+                </AuthGuard>
+              }
+            />
             <Route path="/options-chain" element={<OptionsChain />} />
             <Route path="/news" element={<News />} />
             <Route path="/pricing" element={<Pricing />} />
