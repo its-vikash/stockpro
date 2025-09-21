@@ -1,0 +1,36 @@
+{
+  "name": "stockpro-tailwind",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-brands-svg-icons": "^7.0.1",
+    "@fortawesome/free-regular-svg-icons": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
+    "classnames": "^2.3.2",
+    "date-fns": "^4.1.0",
+    "lightweight-charts": "^5.0.8",
+    "lucide-react": "^0.544.0",
+    "react": "^18.2.0",
+    "react-datepicker": "^8.7.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.14.1",
+    "recharts": "^3.2.1",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "vite": "^5.0.0"
+  }
+}

@@ -1,0 +1,139 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #239BA7;
+  --secondary: #7ADAA5;
+  --accent1: #ECECBB;
+  --accent2: #E1AA36;
+  --dark: #2c3e50;
+  --light: #f5f7fa;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* utility color names for easier use in non-tailwind places */
+.bg-primary {
+  background-color: var(--primary);
+}
+.text-primary {
+  color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.bg-accent1 {
+  background-color: var(--accent1);
+}
+.bg-accent2 {
+  background-color: var(--accent2);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+
+/* marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 24s linear infinite;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.pause-animation {
+  animation-play-state: paused !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* small helpers */
+.container {
+  max-width: 1400px;
+}
+.header-main {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 5px 0px;
+}
+
+.testimonial-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.section-title {
+  @apply relative pl-4;
+   background: linear-gradient(135deg, var(--primary) 0%, var(--accent2) 100%);
+   background-clip: text;
+}
+.from-accent1.to-accent2 {
+  background: linear-gradient(135deg, var(--accent1) 0%, var(--accent2) 100%);
+}
+.from-primary.to-dark {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+}
+.from-dark.to-primary {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+}
+.header-main .header-logo-text {
+  background-clip: text;
+}
+.section-title::before {
+    content: '';
+    @apply absolute left-0 top-[3px] h-6 w-1.5 rounded-lg;
+    background: var(--primary);
+}
+
+a#tv-attr-logo {
+  display: none !important;
+}
