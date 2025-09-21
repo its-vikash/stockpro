@@ -1,23 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
-    <title>Stockpro</title>
-    <script type="module" crossorigin src="/stockpro/assets/index-BKq-r5Da.js"></script>
-    <link rel="stylesheet" crossorigin href="/stockpro/assets/index-CRIVPHyv.css">
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Get the pathname and search string from the current URL
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      var newPath = '/index.html?redirect=' + encodeURIComponent(pathname + search);
+      window.location.href = newPath;
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; URL='/index.html'">
+    </noscript>
   </head>
   <body>
-    <div id="root"></div>
-    <script>
-      (function() {
-        var redirect = sessionStorage.redirect;
-        if (redirect && redirect !== location.pathname) {
-          delete sessionStorage.redirect;
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
+    <p>Redirecting to <a href="/index.html">index.html</a>...</p>
   </body>
 </html>
