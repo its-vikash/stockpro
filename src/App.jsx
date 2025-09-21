@@ -22,7 +22,7 @@ function App() {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/stockpro" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route
               path="/derivatives"
               element={
