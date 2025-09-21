@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { SearchProvider } from './context/SearchContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -21,7 +21,6 @@ function App() {
       <div className="App bg-slate-50 min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
-          <BrowserRouter>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/derivatives" element={
@@ -38,7 +37,6 @@ function App() {
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-          </BrowserRouter>
         </main>
         <Footer />
       </div>
