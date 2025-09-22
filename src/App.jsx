@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { SearchProvider } from './context/SearchContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -14,14 +14,22 @@ import Register from './pages/Register'
 import ForgotPassword from './pages/ForgotPassword'
 import AuthGuard from './components/AuthGuard'
 import './index.css'
+import { useEffect } from 'react';
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (sessionStorage.redirect) {
+      navigate(sessionStorage.redirect.substring(sessionStorage.redirect.indexOf('/')));
+      sessionStorage.clear();
+    }
+  }, [navigate]);
   return (
     <SearchProvider>
       <div className="App bg-slate-50 min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
-          <BrowserRouter>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route
@@ -41,7 +49,6 @@ function App() {
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-            </BrowserRouter>
         </main>
         <Footer />
       </div>
