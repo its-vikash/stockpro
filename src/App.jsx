@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import { SearchProvider } from './context/SearchContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
