@@ -63,7 +63,6 @@ const DerivativesFilter = ({ onSearch, indices, instrumentTypes }) => {
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <option value="">All</option>
               {indices.map(index => (
                 <option key={index} value={index}>{index}</option>
               ))}
@@ -77,7 +76,6 @@ const DerivativesFilter = ({ onSearch, indices, instrumentTypes }) => {
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <option value="">All</option>
               {instrumentTypes.map(type => (
                 <option key={type} value={type}>{type}</option>
               ))}
