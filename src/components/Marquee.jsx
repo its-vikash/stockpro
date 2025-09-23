@@ -15,7 +15,7 @@ export default function Marquee() {
 
     if (!marqueeElement || !contentElement) return
 
-    const speed = 1 // Pixels per frame
+    const speed = 2.5 // Pixels per frame
     const fps = 60 // Frames per second
 
     const animate = () => {
